@@ -1,0 +1,42 @@
+<!-- メインビジュアル -->
+<div class="under-mv img-box obj-fit">
+  <picture>
+    <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv01.jpg" media="(max-width: 769px)">
+    <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv01.jpg" alt="">
+  </picture>
+  <div class="head-ttl">
+    <p class="sub-ttl anime-ttl01">CONTACT</p>
+    <h2>お問い合わせ</h2>
+  </div>
+  <div class="img-box mv-ashirai">
+    <picture>
+      <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/footer_bg-ashirai_sp.svg" media="(max-width: 769px)">
+      <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv-ashirai.svg" alt="">
+    </picture>
+  </div>
+</div><!-- /.under-mv -->
+
+<div class="p_contact p-under_bg-color">
+  <div class="p-under_ashirai01 img-box"><img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under-ashirai01.png" alt=""></div>
+  <div class="inner">
+
+    <p class="message">
+      お問い合わせは、下記お電話またはメールフォームにて承ります。<br>
+      また、お客さまからよく寄せられる質問とその回答を、<a href="/pages/faq/">「よくあるご質問」</a>ページにまとめておりますので、ぜひご覧ください。
+    </p>
+
+    <div class="contact-tel">
+      <p>お電話から</p>
+      <a href="tel:0988925634"><img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/icon-tel.svg" alt="">098-892-5634</a>
+      <p class="business-hours">営業時間｜08:00~19:00（電話受付時間）</p>
+    </div>
+
+    <h3>メールフォームから</h3>
+    <div class="form_wrap">
+      {% section 'contact-form' %}
+    </div>
+
+  </div>
+</div><!-- /.p_contact -->
+
+{% render 'under-common-faq' %}
