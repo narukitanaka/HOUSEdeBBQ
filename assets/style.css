@@ -193,15 +193,18 @@ input[type=button]:focus {
   margin-bottom: 0.7rem;
 }
 .item-card .cate {
+  font-size: 1.4rem;
   margin-bottom: 0.4rem;
 }
 @media screen and (max-width: 768px) {
   .item-card .cate {
+    font-size: 1.1rem;
     margin-bottom: 0;
   }
 }
 .item-card .name {
   margin-bottom: 0.7rem;
+  min-height: 5.5rem;
 }
 @media screen and (max-width: 768px) {
   .item-card .name {
@@ -1395,7 +1398,12 @@ top
 }
 .p-top_wrap03 ul .swiper-wrapper {
   display: flex;
-  justify-content: space-between;
+  gap: 3.5rem;
+}
+@media screen and (max-width: 768px) {
+  .p-top_wrap03 ul .swiper-wrapper {
+    gap: normal;
+  }
 }
 .p-top_wrap03 ul .item-card {
   position: relative;
