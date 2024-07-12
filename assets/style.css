@@ -2488,6 +2488,9 @@ top
     font-size: 1.4rem;
   }
 }
+.p_item-list .sidebar .catelist .allitems a.active {
+  color: #EB6100;
+}
 .p_item-list .sidebar .catelist .allitems a:hover {
   color: #EB6100;
 }
@@ -2567,6 +2570,9 @@ top
   .p_item-list .sidebar .catelist nav li a {
     font-size: 1.3rem;
   }
+}
+.p_item-list .sidebar .catelist nav li a.active {
+  color: #EB6100;
 }
 .p_item-list .sidebar .catelist nav li a:hover {
   color: #EB6100;
@@ -2824,6 +2830,7 @@ top
 }
 .p-itemdetail .detail-content .txt {
   margin-bottom: 4rem;
+  line-height: 2;
 }
 @media screen and (max-width: 768px) {
   .p-itemdetail .detail-content .txt {

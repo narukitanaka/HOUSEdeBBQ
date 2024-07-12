@@ -1,0 +1,131 @@
+<!-- メインビジュアル -->
+<div class="under-mv img-box obj-fit">
+  <picture>
+    <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv01.jpg" media="(max-width: 769px)">
+    <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv01.jpg" alt="">
+  </picture>
+  <div class="head-ttl">
+    <p class="sub-ttl anime-ttl01">LINE UP</p>
+    <h2>商品一覧</h2>
+  </div>
+  <div class="img-box mv-ashirai">
+    <picture>
+      <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/footer_bg-ashirai_sp.svg" media="(max-width: 769px)">
+      <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under_mv-ashirai.svg" alt="">
+    </picture>
+  </div>
+</div><!-- /.under-mv -->
+
+<div class="p_item-list p-under_bg-color">
+  <div class="p-under_ashirai01 img-box"><img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/p-under-ashirai01.png" alt=""></div>
+  <div class="inner flex">
+
+    <div class="sidebar">
+      <div class="catelist">
+        <p class="allitems"><a {% if request.path contains 'all' %}class="active"{% endif %} href="/collections/all/"><img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/icon-ster.svg" alt="">全ての商品</a></p>
+        <div class="sp-flex">
+          <nav class="nav01">
+            <p>
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.005 20.0029C4.48201 20.0029 0.00500488 15.5259 0.00500488 10.0029C0.00500488 4.47993 4.48201 0.00292969 10.005 0.00292969C15.528 0.00292969 20.005 4.47993 20.005 10.0029C20.005 15.5259 15.528 20.0029 10.005 20.0029ZM11.005 11.0029V10.0029H14.005V8.00293H11.419L13.54 5.87993L12.126 4.46593L10.005 6.58793L7.884 4.46593L6.469 5.87993L8.591 8.00193H6.005V10.0019H9.005V11.0019H6.005V13.0019H9.005V15.0019H11.005V13.0019H14.005V11.0019L11.005 11.0029Z" fill="white"/>
+              </svg>
+              予算で選ぶ
+            </p>
+            <ul>
+              <li><a {% if request.path contains '0-3999' %}class="active"{% endif %} href="/collections/price_0-3999/">~3,999円</a></li>
+              <li><a {% if request.path contains '4000-9999' %}class="active"{% endif %} href="/collections/price_4000-9999/">4,000円~9,999円</a></li>
+              <li><a {% if request.path contains '10000' %}class="active"{% endif %} href="/collections/price_10000/">10,000円~</a></li>
+              {% comment %} {% for collection in collections %}
+                {% if collection.handle contains 'price' %}
+                  <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+                {% endif %}
+              {% endfor %} {% endcomment %}
+            </ul>
+          </nav>
+          <nav class="nav02">
+            <p>
+              <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.9811 6.38143L13.9471 4.41443C13.7145 4.1819 13.5428 3.8956 13.4473 3.58089C13.3518 3.26618 13.3353 2.93277 13.3995 2.61018C13.4636 2.2876 13.6062 1.9858 13.8148 1.73153C14.0234 1.47725 14.2915 1.27834 14.5953 1.15241C14.8992 1.02648 15.2293 0.977425 15.5567 1.00958C15.884 1.04174 16.1983 1.15413 16.4718 1.33678C16.7453 1.51943 16.9696 1.76672 17.1247 2.05673C17.2798 2.34675 17.361 2.67054 17.3611 2.99943C17.6901 2.99919 18.014 3.08011 18.3042 3.23501C18.5945 3.38992 18.842 3.61402 19.0249 3.88746C19.2078 4.1609 19.3204 4.47524 19.3528 4.80262C19.3852 5.13 19.3363 5.46031 19.2105 5.76427C19.0847 6.06824 18.8858 6.33648 18.6316 6.54523C18.3773 6.75397 18.0755 6.89677 17.7528 6.96097C17.4302 7.02517 17.0967 7.00879 16.7819 6.91328C16.4671 6.81777 16.1807 6.64608 15.9481 6.41343L14.1281 8.23443M5.86109 13.9994L6.86109 14.9994M4.26509 16.5954C6.99809 19.3294 10.1651 20.5954 11.3351 19.4244C12.5071 18.2524 11.2411 15.0864 8.50709 12.3534C5.77409 9.61943 2.60709 8.35343 1.43709 9.52443C0.265095 10.6964 1.53109 13.8624 4.26509 16.5954Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M11.3361 19.4245C15.2411 15.5185 16.1911 10.1365 13.4571 7.40348C10.7241 4.66948 5.34213 5.61948 1.43713 9.52448" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              商品で選ぶ
+            </p>
+            <ul>
+              <li><a {% if request.path contains 'set' %}class="active"{% endif %} href="/collections/item-set/">セット</a></li>
+              <li><a {% if request.path contains 'single' %}class="active"{% endif %} href="/collections/item-single/">単品</a></li>
+              <li><a {% if request.path contains 'marinate' %}class="active"{% endif %} href="/collections/item-marinate/">タレ漬け</a></li>
+              <li><a {% if request.path contains 'item-saucefree' %}class="active"{% endif %} href="/collections/item-saucefree/">タレ無し</a></li>
+              {% comment %} {% for collection in collections %}
+                {% if collection.handle contains 'item' %}
+                  <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
+                {% endif %}
+              {% endfor %} {% endcomment %}
+            </ul>
+          </nav>
+        </div>
+      </div><!-- /.catelist -->
+    </div><!-- /.sidebar-->
+
+    <div class="list-contents">
+      <ul class="itemlist flex">
+
+        {% assign has_products = false %}
+
+        {% for product in collection.products %}
+
+            {% assign has_products = true %}
+
+            <li class="item-card">
+              <a class="h-scale" href="{{ product.url }}">
+                <div class="img-box obj-fit"><img src="{{ product.featured_image.src | img_url: 'master' }}" alt=""></div>
+                <p class="cate">
+                  {% for collection in product.collections %}
+                    {% assign excluded_collections = 'all,tax,' | split: ',' %}
+                    {% comment %} {% unless excluded_collections contains collection.handle %} {% endcomment %}
+                    {% unless excluded_collections contains collection.handle or collection.handle contains 'price' %}
+                      {{ collection.title }}
+                    {% endunless %}
+                  {% endfor %}
+                </p>
+                <p class="name">{{ product.title }}</p>
+                <p class="price">{{ product.price | money }}（税込）</p>
+              </a>
+              <div class="add-cart">
+                <form action="/cart/add" method="post">
+                  <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                  <input type="hidden" name="quantity" value="1">
+                  <button type="submit">
+                    <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
+                    </svg>
+                    カートに入れる
+                  </button>
+                </form>
+              </div>
+            </li>
+
+        {% endfor %}
+
+      </ul>
+      {% unless has_products %}
+        <p class="unless-has">該当する商品がありません。</p>
+      {% endunless %}
+
+    </div><!-- /.lists-contents -->
+
+  </div>
+</div><!-- /.p_item-list -->
+
+
+{% render 'under-common-faq' %}
+
+{% schema %}
+  {
+    "name": "item-list",
+    "presets": [
+      {
+        "name": "item-list"
+      }
+    ]
+  }
+{% endschema %}

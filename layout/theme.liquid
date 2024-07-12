@@ -409,25 +409,34 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
       <script src="{{ 'swiper-bundle.min.js' | asset_url }}"></script>
       <script src="{{ 'main.js' | asset_url }}"></script>
-      <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-          var quantityInput = document.getElementById('quantity');
-          var minusButton = document.getElementById('minus');
-          var plusButton = document.getElementById('plus');
-      
-          minusButton.addEventListener('click', function() {
-            var currentVal = parseInt(quantityInput.value, 10);
-            if (currentVal > 1) {
-              quantityInput.value = currentVal - 1;
-            }
+      {% if template.name == 'product' %}
+        <script>
+          //商品詳細スライダー
+          const swiperitem = new Swiper(".swiper-item", {
+            loop: true,
+          }); 
+          function thumbnail(index) {
+            swiperitem.slideTo(index);
+          }
+        </script>
+        <script>
+          document.addEventListener('DOMContentLoaded', (event) => {
+            var quantityInput = document.getElementById('quantity');
+            var minusButton = document.getElementById('minus');
+            var plusButton = document.getElementById('plus');
+            minusButton.addEventListener('click', function() {
+              var currentVal = parseInt(quantityInput.value, 10);
+              if (currentVal > 1) {
+                quantityInput.value = currentVal - 1;
+              }
+            });
+            plusButton.addEventListener('click', function() {
+              var currentVal = parseInt(quantityInput.value, 10);
+              quantityInput.value = currentVal + 1;
+            });
           });
-      
-          plusButton.addEventListener('click', function() {
-            var currentVal = parseInt(quantityInput.value, 10);
-            quantityInput.value = currentVal + 1;
-          });
-        });
-      </script>
+        </script>
+      {% endif %}
 
     </div><!-- /.wrap-hidden -->
 
