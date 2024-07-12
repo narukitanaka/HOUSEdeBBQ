@@ -63,83 +63,38 @@
     <div class="recommend-swiper fadeIn">
       <div class="swiper-wrapper">
 
-        <div class="swiper-slide box">
-          <div class="left">
-            <p class="ttl">BBQステーキセット01（仮）</p>
-            <p class="price">0,000円(税込)</p>
-            <div class="add-cart">
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                <input type="hidden" name="quantity" value="1">
-                <button class="cart-btn01" type="submit">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
-                  </svg>
-                  カートに入れる
-                </button>
-              </form>
-            </div>
-            <div class="btn-wrap"><a href="#" class="btn01">VIEW DETAIL</a></div>
-          </div><!-- /.left -->
-          <div class="right img-box obj-fit">
-            <picture>
-              <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01_sp.jpg" media="(max-width: 769px)">
-              <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01.jpg" alt="">
-            </picture>
-          </div><!-- /.right -->
-        </div><!-- /.box -->
+      {% for block in section.blocks %}
+        {% if block.type == 'recommend-item' %}
+          {% assign product = all_products[block.settings.recommend-item] %}
+            <div class="swiper-slide box">
+              <div class="left">
+                <p class="ttl">{{ product.title }}</p>
+                <p class="price">{{ product.price | money_with_currency }}(税込)</p>
+                <div class="add-cart">
+                  <form action="/cart/add" method="post">
+                    <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                    <input type="hidden" name="quantity" value="1">
+                    <button class="cart-btn01" type="submit">
+                      <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
+                      </svg>
+                      カートに入れる
+                    </button>
+                  </form>
+                </div>
+                <div class="btn-wrap"><a href="{{ product.url }}" class="btn01">VIEW DETAIL</a></div>
+              </div><!-- /.left -->
+              <div class="right img-box obj-fit">
+                <picture>
+                  <source srcset="{{ product.featured_image.src | img_url: 'master' }}" media="(max-width: 769px)">
+                  <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.title }}">
+                </picture>
+              </div><!-- /.right -->
+            </div><!-- /.box -->
+      
+        {% endif %}
+      {% endfor %}
 
-        <div class="swiper-slide box">
-          <div class="left">
-            <p class="ttl">BBQステーキセット02（仮）</p>
-            <p class="price">0,000円(税込)</p>
-            <div class="add-cart">
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                <input type="hidden" name="quantity" value="1">
-                <button class="cart-btn01" type="submit">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
-                  </svg>
-                  カートに入れる
-                </button>
-              </form>
-            </div>
-            <div class="btn-wrap"><a href="#" class="btn01">VIEW DETAIL</a></div>
-          </div><!-- /.left -->
-          <div class="right img-box obj-fit">
-            <picture>
-              <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01_sp.jpg" media="(max-width: 769px)">
-              <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01.jpg" alt="">
-            </picture>
-          </div><!-- /.right -->
-        </div><!-- /.box -->
-
-        <div class="swiper-slide box">
-          <div class="left">
-            <p class="ttl">BBQステーキセット03（仮）</p>
-            <p class="price">0,000円(税込)</p>
-            <div class="add-cart">
-              <form action="/cart/add" method="post">
-                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
-                <input type="hidden" name="quantity" value="1">
-                <button class="cart-btn01" type="submit">
-                  <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M18.125 18.25C18.7217 18.25 19.294 18.4871 19.716 18.909C20.1379 19.331 20.375 19.9033 20.375 20.5C20.375 21.0967 20.1379 21.669 19.716 22.091C19.294 22.5129 18.7217 22.75 18.125 22.75C17.5283 22.75 16.956 22.5129 16.534 22.091C16.1121 21.669 15.875 21.0967 15.875 20.5C15.875 19.2512 16.8762 18.25 18.125 18.25ZM0.125 0.25H3.80375L4.86125 2.5H21.5C21.7984 2.5 22.0845 2.61853 22.2955 2.82951C22.5065 3.04048 22.625 3.32663 22.625 3.625C22.625 3.81625 22.5687 4.0075 22.49 4.1875L18.4625 11.4663C18.08 12.1525 17.3375 12.625 16.4938 12.625H8.1125L7.1 14.4588L7.06625 14.5938C7.06625 14.6683 7.09588 14.7399 7.14863 14.7926C7.20137 14.8454 7.27291 14.875 7.3475 14.875H20.375V17.125H6.875C6.27826 17.125 5.70597 16.8879 5.28401 16.466C4.86205 16.044 4.625 15.4717 4.625 14.875C4.625 14.4813 4.72625 14.11 4.895 13.795L6.425 11.0388L2.375 2.5H0.125V0.25ZM6.875 18.25C7.47174 18.25 8.04403 18.4871 8.46599 18.909C8.88795 19.331 9.125 19.9033 9.125 20.5C9.125 21.0967 8.88795 21.669 8.46599 22.091C8.04403 22.5129 7.47174 22.75 6.875 22.75C6.27826 22.75 5.70597 22.5129 5.28401 22.091C4.86205 21.669 4.625 21.0967 4.625 20.5C4.625 19.2512 5.62625 18.25 6.875 18.25ZM17 10.375L20.1275 4.75H5.9075L8.5625 10.375H17Z" fill="white"/>
-                  </svg>
-                  カートに入れる
-                </button>
-              </form>
-            </div>
-            <div class="btn-wrap"><a href="#" class="btn01">VIEW DETAIL</a></div>
-          </div><!-- /.left -->
-          <div class="right img-box obj-fit">
-            <picture>
-              <source srcset="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01_sp.jpg" media="(max-width: 769px)">
-              <img src="https://cdn.shopify.com/s/files/1/0886/8125/1090/files/top-reccomend_img01.jpg" alt="">
-            </picture>
-          </div><!-- /.right -->
-        </div><!-- /.box -->
 
       </div><!-- /.swipr-wrapper -->
 
@@ -385,6 +340,7 @@
     </div><!-- /.flex -->
   </div><!-- /.inner -->
 </section><!-- /.common_wrap-faq -->
+
 
 
 {% schema %}

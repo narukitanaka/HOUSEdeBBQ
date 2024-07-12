@@ -64,12 +64,19 @@
             "image_banner_sp": "shopify:\/\/shop_images\/p-under_mv01.jpg",
             "link_banner": "shopify:\/\/collections"
           }
+        },
+        "recommend_item_HjdhNq": {
+          "type": "recommend-item",
+          "settings": {
+            "recommend-item": "人気top３bbqセット"
+          }
         }
       },
       "block_order": [
         "banner_top01_3HUQHz",
         "banner_top01_WC3R6F",
-        "banner_top01_BXHRNh"
+        "banner_top01_BXHRNh",
+        "recommend_item_HjdhNq"
       ],
       "settings": {
       }
