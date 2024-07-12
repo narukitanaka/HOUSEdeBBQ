@@ -11,12 +11,16 @@ function navOpen() {
     $('.mega-menu').addClass('is-megamenu-open');
     $('.header-inner').addClass('is-megamenu-icon');
     $('.ham-txt').text('閉じる');
+    $('.p-top_wrap02').addClass('dn');
+    $('.sec-visual-swiper').addClass('dn');
     navFlg = true;
   } else {
     $('.hamberger-wrap').removeClass('is-ham-open');
     $('.mega-menu').removeClass('is-megamenu-open');
     $('.header-inner').removeClass('is-megamenu-icon');
     $('.ham-txt').text('メニュー');
+    $('.p-top_wrap02').removeClass('dn');
+    $('.sec-visual-swiper').addClass('dn');
     navFlg = false;
   }
 }

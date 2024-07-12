@@ -260,6 +260,7 @@ input[type=button]:focus {
 }
 
 .bg-filter {
+  display: block !important;
   position: fixed;
   top: 0;
   left: 0;
@@ -278,6 +279,10 @@ input[type=button]:focus {
 
 .layer {
   position: relative;
+}
+
+.dn {
+  display: none !important;
 }
 
 /*************************************************
@@ -903,6 +908,8 @@ footer {
   margin-top: -6.3194444444vw;
   padding: 9.9305555556vw 0 2.3rem;
   background: url(https://cdn.shopify.com/s/files/1/0886/8125/1090/files/footer.bg.png) no-repeat top/cover;
+  position: sticky;
+  top: 100%;
 }
 @media screen and (max-width: 768px) {
   footer {
@@ -3612,6 +3619,55 @@ top
   .form-error-text {
     font-size: 14px !important;
   }
+}
+
+/*************************************************
+  検索結果
+*************************************************/
+.template-search h1, .template-search h2, .template-search h3, .template-search p, .template-search a, .template-search div {
+  color: #fff;
+}
+
+/*************************************************
+  カート
+*************************************************/
+.template-cart h1, .template-cart h2, .template-cart h3, .template-cart p, .template-cart a, .template-cart span, .template-cart div, .template-cart th {
+  color: #fff !important;
+}
+.template-cart th {
+  font-size: 13px;
+}
+
+.cart__footer-wrapper .tax-note {
+  color: #fff;
+}
+
+.cart-items th {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5) !important;
+}
+@media screen and (max-width: 768px) {
+  .cart-items th {
+    border-bottom: none !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .cart-items thead tr {
+    border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5) !important;
+  }
+}
+
+.cart__items {
+  border-bottom: 0.1rem solid rgba(255, 255, 255, 0.5) !important;
+}
+
+/*************************************************
+  マイページ
+*************************************************/
+.customer, .login, .register {
+  position: relative;
+}
+.customer h1, .customer h2, .customer h3, .customer p, .customer a, .customer div, .login h1, .login h2, .login h3, .login p, .login a, .login div, .register h1, .register h2, .register h3, .register p, .register a, .register div {
+  color: #fff !important;
 }
 
 /**

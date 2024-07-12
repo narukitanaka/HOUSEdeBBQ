@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <meta name="theme-color" content="">
     <link rel="canonical" href="{{ canonical_url }}">
 
@@ -263,7 +263,7 @@
           display: grid;
           grid-template-rows: auto auto 1fr auto;
           grid-template-columns: 100%;
-          min-height: 100%;
+          min-height: 100dvh;
           margin: 0;
           font-size: 1.5rem;
           letter-spacing: 0.06rem;
@@ -278,12 +278,15 @@
           }
         }
         main {
-          padding: 250px 0 100px !important;
+          padding: 150px 0 !important;
         }
         @media screen and (max-width: 769px) {
           main {
-            padding: 160px 0 100px !important;
+            padding: 100px 0 40px !important;
           }
+        }
+        .common_wrap-faq {
+          background-color: rgba(0, 0, 0, 0.5) !important;
         }
       {% endstyle %}
     {% endif %}
@@ -346,7 +349,11 @@
       <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
         {{ content_for_layout }}
       </main>
-  
+
+      {% if template.name == 'cart' or template.name == 'search' or template.name == 'account' or template.name == 'addresses' or template.name == 'login' or template.name == 'order' or template.name == 'register' %}
+        {% render 'under-common-faq' %}
+      {% endif %}
+
       {% sections 'footer-group' %}
   
       <ul hidden>
