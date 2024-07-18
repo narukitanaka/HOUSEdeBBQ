@@ -145,12 +145,23 @@
           "recommend_item_VkAmqt": {
             "type": "recommend-item",
             "settings": {
-              "recommend-item": "00010"
+              "recommend-item": "00010",
+              "image_recommend_pc": "shopify:\/\/shop_images\/top-reccomend_img01.jpg",
+              "image_recommend_sp": "shopify:\/\/shop_images\/item-set.png"
+            }
+          },
+          "recommend_item_ybEdgC": {
+            "type": "recommend-item",
+            "settings": {
+              "recommend-item": "00016",
+              "image_recommend_pc": "shopify:\/\/shop_images\/top-reccomend_img01.jpg",
+              "image_recommend_sp": "shopify:\/\/shop_images\/item-set.png"
             }
           }
         },
         "block_order": [
-          "recommend_item_VkAmqt"
+          "recommend_item_VkAmqt",
+          "recommend_item_ybEdgC"
         ],
         "settings": {
         }

@@ -34,8 +34,8 @@
               </div><!-- /.left -->
               <div class="right img-box obj-fit">
                 <picture>
-                  <source srcset="{{ product.featured_image.src | img_url: 'master' }}" media="(max-width: 769px)">
-                  <img src="{{ product.featured_image.src | img_url: 'master' }}" alt="{{ product.title }}">
+                  <source srcset="{{ block.settings.image_recommend_sp | img_url: 'master' }}" media="(max-width: 769px)">
+                  <img src="{{ block.settings.image_recommend_pc | img_url: 'master' }}" alt="{{ product.title }}">
                 </picture>
               </div><!-- /.right -->
             </div><!-- /.box -->
@@ -65,6 +65,16 @@
             "type": "product",
             "id": "recommend-item",
             "label": "商品を選択"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_recommend_pc",
+            "label": "PC画像"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_recommend_sp",
+            "label": "SP画像"
           }
         ]
       }

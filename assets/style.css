@@ -189,8 +189,9 @@ input[type=button]:focus {
 }
 .item-card .img-box {
   width: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1/0.94;
   margin-bottom: 0.7rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .item-card .cate {
   font-size: 1.4rem;
@@ -2666,8 +2667,7 @@ top
   overflow: hidden;
 }
 .p-itemdetail .img-wrapper .swiper-slide .img-wrap {
-  aspect-ratio: 1/1;
-  background-color: rgba(0, 0, 0, 0.7);
+  aspect-ratio: 1/0.94;
 }
 .p-itemdetail .img-wrapper .swiper-slide .img-wrap img {
   width: 100%;

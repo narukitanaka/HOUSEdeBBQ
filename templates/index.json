@@ -43,6 +43,7 @@
       "blocks": {
         "banner_top01_3HUQHz": {
           "type": "banner-top01",
+          "disabled": true,
           "settings": {
             "image_banner_pc": "shopify:\/\/shop_images\/top-banner01.jpg",
             "image_banner_sp": "shopify:\/\/shop_images\/top-banner01.jpg",
@@ -51,6 +52,7 @@
         },
         "banner_top01_WC3R6F": {
           "type": "banner-top01",
+          "disabled": true,
           "settings": {
             "image_banner_pc": "shopify:\/\/shop_images\/top-banner01.jpg",
             "image_banner_sp": "shopify:\/\/shop_images\/top-banner01.jpg",
@@ -59,6 +61,7 @@
         },
         "banner_top01_BXHRNh": {
           "type": "banner-top01",
+          "disabled": true,
           "settings": {
             "image_banner_pc": "shopify:\/\/shop_images\/p-under_mv01.jpg",
             "image_banner_sp": "shopify:\/\/shop_images\/p-under_mv01.jpg",
@@ -68,7 +71,17 @@
         "recommend_item_HjdhNq": {
           "type": "recommend-item",
           "settings": {
-            "recommend-item": "00010"
+            "recommend-item": "00010",
+            "image_recommend_pc": "shopify:\/\/shop_images\/top-reccomend_img01.jpg",
+            "image_recommend_sp": "shopify:\/\/shop_images\/item-set.png"
+          }
+        },
+        "recommend_item_tnUtqm": {
+          "type": "recommend-item",
+          "settings": {
+            "recommend-item": "00016",
+            "image_recommend_pc": "shopify:\/\/shop_images\/top-reccomend_img01.jpg",
+            "image_recommend_sp": "shopify:\/\/shop_images\/item-set.png"
           }
         }
       },
@@ -76,7 +89,8 @@
         "banner_top01_3HUQHz",
         "banner_top01_WC3R6F",
         "banner_top01_BXHRNh",
-        "recommend_item_HjdhNq"
+        "recommend_item_HjdhNq",
+        "recommend_item_tnUtqm"
       ],
       "settings": {
       }
