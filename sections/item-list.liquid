@@ -1,3 +1,16 @@
+<style>
+  #itemList {
+    padding-top: 11rem;
+    margin-top: -11rem;
+  }
+  @media screen and (max-width: 768px) {
+    #itemList {
+    padding-top: 8rem;
+    margin-top: -8rem;
+    }
+  }
+</style>
+
 <!-- メインビジュアル -->
 <div class="under-mv img-box obj-fit">
   <picture>
@@ -32,9 +45,9 @@
               予算で選ぶ
             </p>
             <ul>
-              <li><a {% if request.path contains '0-3999' %}class="active"{% endif %} href="/collections/price_0-3999/">~3,999円</a></li>
-              <li><a {% if request.path contains '4000-9999' %}class="active"{% endif %} href="/collections/price_4000-9999/">4,000円~9,999円</a></li>
-              <li><a {% if request.path contains '10000' %}class="active"{% endif %} href="/collections/price_10000/">10,000円~</a></li>
+              <li><a {% if request.path contains '0-3999' %}class="active"{% endif %} href="/collections/price_0-3999#itemList">~3,999円</a></li>
+              <li><a {% if request.path contains '4000-9999' %}class="active"{% endif %} href="/collections/price_4000-9999#itemList">4,000円~9,999円</a></li>
+              <li><a {% if request.path contains '10000' %}class="active"{% endif %} href="/collections/price_10000#itemList">10,000円~</a></li>
               {% comment %} {% for collection in collections %}
                 {% if collection.handle contains 'price' %}
                   <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
@@ -51,10 +64,10 @@
               商品で選ぶ
             </p>
             <ul>
-              <li><a {% if request.path contains 'set' %}class="active"{% endif %} href="/collections/item-set/">セット</a></li>
-              <li><a {% if request.path contains 'single' %}class="active"{% endif %} href="/collections/item-single/">単品</a></li>
-              <li><a {% if request.path contains 'marinate' %}class="active"{% endif %} href="/collections/item-marinate/">タレ漬け</a></li>
-              <li><a {% if request.path contains 'item-saucefree' %}class="active"{% endif %} href="/collections/item-saucefree/">タレ無し</a></li>
+              <li><a {% if request.path contains 'set' %}class="active"{% endif %} href="/collections/item-set#itemList">セット</a></li>
+              <li><a {% if request.path contains 'single' %}class="active"{% endif %} href="/collections/item-single#itemList">単品</a></li>
+              <li><a {% if request.path contains 'marinate' %}class="active"{% endif %} href="/collections/item-marinate#itemList">タレ漬け</a></li>
+              <li><a {% if request.path contains 'item-saucefree' %}class="active"{% endif %} href="/collections/item-saucefree#itemList">タレ無し</a></li>
               {% comment %} {% for collection in collections %}
                 {% if collection.handle contains 'item' %}
                   <li><a href="{{ collection.url }}">{{ collection.title }}</a></li>
@@ -67,7 +80,7 @@
     </div><!-- /.sidebar-->
 
     <div class="list-contents">
-      <ul class="itemlist flex">
+      <ul id="itemList" class="itemlist flex">
 
         {% assign has_products = false %}
 
